@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Step one
-      uses: actions/checkout:v2
+      uses: docker://actions/checkout:v2
     - name: Step two
       run: env | sort
   job2:
@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Step one
-      uses: actions/checkout:v2
+      uses: docker://actions/checkout:v2
     - name: Step two
       run: "Get-Child-Item Env: | Sort-Object Name"
 
